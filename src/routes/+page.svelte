@@ -5,7 +5,8 @@
         Header,
         Color,
         Button,
-        Badge
+        Badge,
+        Frame
     } from "$lib/index.ts";
 
     import {
@@ -40,17 +41,17 @@
     <h2>Buttons</h2>
     <Flex>
         <Button>
-            Valider
+            Back
         </Button>
         <Button variant="secondary">
-            Valider
+            Back
         </Button>
         <Button variant="variant">
-            Valider
+            Back
         </Button>
     </Flex>
     <Flex>
-        <Button icon={Check}>Valider</Button>
+        <Button icon={Check}>Back</Button>
         <Button icon={Check} />
         <Button variant="secondary">
             {#snippet icon()}
@@ -60,7 +61,7 @@
         </Button>
     </Flex>
     <Flex>
-        <Button href="/" variant="secondary" icon={Check}>Valider</Button>
+        <Button href="/" variant="secondary" icon={Check}>Back</Button>
         <Button href="/" variant="variant" icon={Check} />
     </Flex>
 </Stack>
@@ -79,4 +80,34 @@
             GitHub
         </Badge>
     </Flex>
+</Stack>
+
+<Stack>
+    <h2>Frames</h2>
+    <Flex gap="s4">
+        <Frame>
+            <Flex direction='column'>
+                <p><b>This is a Frame</b></p>
+                <p>It is used to make Cards</p>
+            </Flex>
+        </Frame>
+        <Frame>
+            <Flex direction='column'>
+                <p><b>This is a Frame</b></p>
+                <p>It is used to make Cards</p>
+            </Flex>
+        </Frame>
+    </Flex>
+    <Frame outline={true}>
+        <p><b>Frame can have outline</b></p>
+    </Frame>
+    <Frame outline={true} transparent={true}>
+        <p><b>Frame can have outline and be transparent</b></p>
+    </Frame>
+    <Frame variant="variant">
+        <p><b>Frame can have outline and be transparent</b></p>
+    </Frame>
+    <Frame variant="variant" outline={true}>
+        <p><b>Frame can have outline and be transparent</b></p>
+    </Frame>
 </Stack>

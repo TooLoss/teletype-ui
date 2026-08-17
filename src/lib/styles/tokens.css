@@ -29,10 +29,11 @@
     --color-primary-800:  oklch(20%  calc(var(--primary-base-chroma)*0.50)  var(--hue-primary));
     --color-primary-950:  oklch(10%  calc(var(--primary-base-chroma)*0.20)  var(--hue-primary));
 
-    --color-secondary-100: oklch(99% calc(var(--secondary-base-chroma) * 0.95) var(--hue-secondary));
-    --color-secondary-300: oklch(80% calc(var(--secondary-base-chroma) * 0.90) var(--hue-secondary));
+    --color-secondary-100: oklch(99% calc(var(--secondary-base-chroma)*0.95) var(--hue-secondary));
+    --color-secondary-300: oklch(80% calc(var(--secondary-base-chroma)*0.90) var(--hue-secondary));
     --color-secondary-500: oklch(60% var(--secondary-base-chroma) var(--hue-secondary));
     --color-secondary-600: oklch(50% var(--secondary-base-chroma) var(--hue-secondary));
+    --color-secondary-800: oklch(20% calc(var(--secondary-base-chroma)*0.50) var(--hue-secondary));
 
     
     /* Surface */
