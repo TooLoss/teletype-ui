@@ -52,4 +52,8 @@
         <Button icon={Check}>Valider</Button>
         <Button icon={Check} />
     </Flex>
+    <Flex>
+        <Button href="/" variant="secondary" icon={Check}>Valider</Button>
+        <Button href="/" variant="variant" icon={Check} />
+    </Flex>
 </Stack>
