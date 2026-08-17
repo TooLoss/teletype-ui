@@ -32,7 +32,7 @@
         ...rest
     }: Props = $props();
 
-    const iconSize = $derived(children ? '1em' : '1.25em');
+    const iconSize = $derived(children ? '1.25em' : '1.5em');
 
     const classes = $derived(
         [
@@ -90,7 +90,7 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        gap: var(--size-s2);
+        gap: var(--size-s3);
         color: var(--bg-app);
         padding: var(--size-s4) var(--size-s3);
         border-radius: var(--size-s2);
@@ -160,6 +160,12 @@
         background-color: var(--action-secondary-active);
         border-color: var(--action-secondary-active);
         box-shadow: 0px 1px 0px 1px var(--action-secondary-active);
+    }
+
+    .btn-icon-only {
+        aspect-ratio: 1 / 1;
+        height: 100%;
+        padding: var(--size-s4)
     }
 
 </style>

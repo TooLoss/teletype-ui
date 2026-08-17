@@ -49,6 +49,7 @@
         </Button>
     </Flex>
     <Flex>
+        <Button icon={Check}>Valider</Button>
         <Button icon={Check} />
     </Flex>
 </Stack>
