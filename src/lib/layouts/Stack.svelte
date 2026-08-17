@@ -21,7 +21,6 @@
 
 <!-- Use Flex to align items vertically -->
 
-<Flex direction="column" align={align} gap={gap} {...rest}>
+<Flex direction="column" align={align} gap={gap} style="padding: var(--size-s1) 0" {...rest}>
     {@render children?.()}
 </Flex>
-

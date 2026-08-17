@@ -11,7 +11,6 @@
 
 <style>
     .page {
-        max-width: min(800px, 100%);
         margin: 0 auto;
     }
 </style>

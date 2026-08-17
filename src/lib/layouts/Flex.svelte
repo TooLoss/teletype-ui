@@ -36,11 +36,14 @@
         display: flex;
         ${padding ? `padding: var(--size-${padding});` : ''}
         ${margin ? `margin: var(--size-${margin});` : ''}
+        margin-inline: auto;
+        width: 100%;
         gap: var(--size-${gap});
         flex-direction: ${direction};
         align-items: ${align};
         justify-content: ${justify};
         flex-wrap: ${wrap ? "wrap" : "nowrap"};
+        max-width: var(--stack-max-width);
         ${customStyle ?? ''}
     `}
     {...rest}

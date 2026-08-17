@@ -2,7 +2,8 @@
     import {
         Flex,
         Stack,
-        Header
+        Header,
+        Color
     } from "$lib/index.ts";
 </script>
 
@@ -12,16 +13,19 @@
             <h1>teletype-ui</h1>
             <p>UI Component Library</p>
         </Stack>
-        <div style="height: 100px; width: 100px; background-color: var(--bg-surface)">
-        </div>
+        <span style="height: 100px; width: 100px; background-color: var(--bg-elevated)">
+        </span>
     </Flex>
 </Header>
 
-<Flex gap="s2" direction="column">
+<Color>
     <Stack>
-        <p>Test</p>
-        <p>Test</p>
-        <p>Test</p>
-        <p>Test</p>
+        <h2>Why ?</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </Stack>
-</Flex>
+</Color>
+
+<Stack>
+    <h2>Showcase</h2>
+    <p>Each and every components and tokens from the UI library.</p>
+</Stack>

@@ -4,7 +4,7 @@
 
     /* SPACING */
 
-    --spacing-ratio: 1.9;
+    --spacing-ratio: 2;
 
     --size-s3: 1rem;
     --size-s5: calc(var(--size-s3) / (2 * var(--spacing-ratio)));
@@ -34,9 +34,9 @@
 
     
     /* Surface */
-    --bg-canvas:            var(--color-primary-950);
-    --bg-surface:           var(--color-primary-800);
-    --bg-surface-elevated:  var(--color-primary-600);
+    --bg-app:          var(--color-primary-950);
+    --bg-app-variant:  var(--color-primary-800);
+    --bg-elevated:     var(--color-primary-600);
 
     /* Text */
     --text-primary:    oklch(98%  0.01  var(--hue-primary));
@@ -56,4 +56,7 @@
     --border-subtle:  var(--color-primary-800);
     --border-strong:  var(--color-primary-600);
     --focus-ring:     var(--color-secondary-300);
+
+    /* Global States */
+    --stack-max-width: min(800px, 100%);
 }
