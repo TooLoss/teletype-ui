@@ -1,0 +1,12 @@
+/* This file contains all constants relative to the UI library. */
+
+:root {
+    --spacing-ratio: 1.5;
+
+    --size-s3: 1rem;
+    --size-s5: calc(var(--size-s3) / (2 * var(--spacing-ratio)));
+    --size-s4: calc(var(--size-s3) / var(--spacing-ratio));
+    --size-s2: calc(var(--size-s3) * var(--spacing-ratio));
+    --size-s1: calc(var(--size-s3) * 2 * var(--spacing-ratio));
+    --size-zero: 0;
+}

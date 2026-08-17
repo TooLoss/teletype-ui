@@ -1,0 +1,102 @@
+/* Fonts and headings. */
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('../assets/fonts/SpaceMono/SpaceMono-Regular.ttf')
+        format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('../assets/fonts/SpaceMono/SpaceMono-Bold.ttf')
+        format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter/Inter-Regular.ttf')
+        format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter/Inter-Bold.ttf')
+        format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter/Inter-Light.ttf')
+        format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter/Inter-Black.ttf')
+        format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.25;
+    color: var(--color-fg-high);
+}
+
+*:focus-visible {
+    outline-color: var(--color-border-focus);
+    outline-width: var(--size-s4);
+    outline-offset: var(--size-s5);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Space Mono', sans-serif;
+}
+
+h1 {
+    font-size: var(--size-s1);
+}
+
+h2 {
+    font-size: var(--size-s2);
+}
+
+h3 {
+    font-size: var(--size-s3);
+}
+
+h4 {
+    font-size: var(--size-s4);
+}
+
+p,
+span,
+label,
+a,
+li,
+div {
+    text-wrap: balance;
+}
+
