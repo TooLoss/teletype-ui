@@ -3,8 +3,13 @@
         Flex,
         Stack,
         Header,
-        Color
+        Color,
+        Button
     } from "$lib/index.ts";
+
+    import {
+        Check
+    } from "@lucide/svelte";
 </script>
 
 <Header top="s1">
@@ -26,6 +31,24 @@
 </Color>
 
 <Stack>
-    <h2>Showcase</h2>
+    <h1>Showcase</h1>
     <p>Each and every components and tokens from the UI library.</p>
+</Stack>
+
+<Stack>
+    <h2>Buttons</h2>
+    <Flex>
+        <Button>
+            Valider
+        </Button>
+        <Button variant="secondary">
+            Valider
+        </Button>
+        <Button variant="variant">
+            Valider
+        </Button>
+    </Flex>
+    <Flex>
+        <Button icon={Check} />
+    </Flex>
 </Stack>
