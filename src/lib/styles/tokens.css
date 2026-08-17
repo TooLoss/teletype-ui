@@ -1,6 +1,9 @@
 /* This file contains all constants relative to the UI library. */
 
 :root {
+
+    /* SPACING */
+
     --spacing-ratio: 1.5;
 
     --size-s3: 1rem;
@@ -9,4 +12,48 @@
     --size-s2: calc(var(--size-s3) * var(--spacing-ratio));
     --size-s1: calc(var(--size-s3) * 2 * var(--spacing-ratio));
     --size-zero: 0;
+
+    /* COLORS */
+
+    --hue-primary: 260deg;
+    --hue-secondary: calc(var(--hue-primary) + 180deg);
+    --primary-base-chroma: 0.18;
+    --secondary-base-chroma: 0.2;
+
+    --color-primary-50:   oklch(98%  calc(var(--primary-base-chroma)*0.15)  var(--hue-primary));
+    --color-primary-100:  oklch(90%  calc(var(--primary-base-chroma)*0.40)  var(--hue-primary));
+    --color-primary-200:  oklch(80%  calc(var(--primary-base-chroma)*0.70)  var(--hue-primary));
+    --color-primary-400:  oklch(60%  var(--primary-base-chroma)             var(--hue-primary));
+    --color-primary-600:  oklch(40%  calc(var(--primary-base-chroma)*0.85)  var(--hue-primary));
+    --color-primary-800:  oklch(20%  calc(var(--primary-base-chroma)*0.50)  var(--hue-primary));
+    --color-primary-950:  oklch(10%  calc(var(--primary-base-chroma)*0.20)  var(--hue-primary));
+
+    --color-secondary-100: oklch(90% calc(var(--secondary-base-chroma) * 0.35) var(--hue-secondary));
+    --color-secondary-300: oklch(70% calc(var(--secondary-base-chroma) * 0.80) var(--hue-secondary));
+    --color-secondary-500: oklch(50% var(--secondary-base-chroma) var(--hue-secondary));
+
+    
+    /* Surface */
+    --bg-canvas:            var(--color-primary-950);
+    --bg-surface:           var(--color-primary-800);
+    --bg-surface-elevated:  var(--color-primary-600);
+
+    /* Text */
+    --text-primary:    oklch(98%  0.01  var(--hue-primary));
+    --text-secondary:  oklch(80%  0.03  var(--hue-primary));
+    --text-muted:      oklch(65%  0.02  var(--hue-primary));
+    --text-on-accent:  oklch(99%  0     0);
+
+    /* Interactions */
+    --action-primary-default:  var(--color-primary-400);
+    --action-primary-hover:    var(--color-primary-600);
+    --action-primary-active:   var(--color-primary-800);
+
+    --action-secondary-default:  var(--color-secondary-300);
+    --action-secondary-hover:    var(--color-secondary-500);
+
+    /* Border */
+    --border-subtle:  var(--color-primary-800);
+    --border-strong:  var(--color-primary-600);
+    --focus-ring:     var(--color-secondary-300);
 }

@@ -57,11 +57,12 @@
 :root {
     font-family: 'Inter', sans-serif;
     line-height: 1.25;
-    color: var(--color-fg-high);
+    color: var(--text-primary);
+    background-color: var(--bg-canvas);
 }
 
 *:focus-visible {
-    outline-color: var(--color-border-focus);
+    outline-color: var(--border-strong);
     outline-width: var(--size-s4);
     outline-offset: var(--size-s5);
 }
@@ -100,3 +101,14 @@ div {
     text-wrap: balance;
 }
 
+a {
+    color: var(--action-primary-default);
+}
+
+a:hover {
+    color: var(--action-primary-hover);
+}
+
+a:active {
+    color: var(--action-primary-active);
+}
