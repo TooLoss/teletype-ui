@@ -4,7 +4,7 @@
 
     /* SPACING */
 
-    --spacing-ratio: 1.5;
+    --spacing-ratio: 1.9;
 
     --size-s3: 1rem;
     --size-s5: calc(var(--size-s3) / (2 * var(--spacing-ratio)));

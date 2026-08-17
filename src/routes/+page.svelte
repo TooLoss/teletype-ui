@@ -1,6 +1,27 @@
-<h1>teletype-ui</h1>
-<p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
-<p>Visit <a href="https://sveltvar(--size-s3)e.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+    import {
+        Flex,
+        Stack,
+        Header
+    } from "$lib/index.ts";
+</script>
 
-<div style="weight: 20px; height: 20px; background-color: var(--primary-20)">
-</div>
+<Header top="s1">
+    <Flex wrap={false} justify="space-between" align="center" style="width: 100%;">
+        <Stack>
+            <h1>teletype-ui</h1>
+            <p>UI Component Library</p>
+        </Stack>
+        <div style="height: 100px; width: 100px; background-color: var(--bg-surface)">
+        </div>
+    </Flex>
+</Header>
+
+<Flex gap="s2" direction="column">
+    <Stack>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+    </Stack>
+</Flex>

@@ -5,13 +5,13 @@
     let { children } = $props();
 </script>
 
-<div class="container">
+<div class="page">
     {@render children?.()}
 </div>
 
 <style>
-    .container {
-        max-width: min(1000px, 100%);
+    .page {
+        max-width: min(800px, 100%);
         margin: 0 auto;
     }
 </style>

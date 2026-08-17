@@ -67,6 +67,16 @@
     outline-offset: var(--size-s5);
 }
 
+p,
+span,
+label,
+a,
+li,
+div {
+    text-wrap: balance;
+    color: var(--text-secondary);
+}
+
 h1,
 h2,
 h3,
@@ -74,6 +84,7 @@ h4,
 h5,
 h6 {
     font-family: 'Space Mono', sans-serif;
+    color: var(--text-primary);
 }
 
 h1 {
@@ -90,15 +101,6 @@ h3 {
 
 h4 {
     font-size: var(--size-s4);
-}
-
-p,
-span,
-label,
-a,
-li,
-div {
-    text-wrap: balance;
 }
 
 a {
