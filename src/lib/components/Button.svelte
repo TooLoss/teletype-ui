@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { type Icon } from '@lucide/svelte';
+    import { type LucideIcon } from '@lucide/svelte';
     import type { HTMLAnchorAttributes, HTMLButtonAttributes } from 'svelte/elements';
 
     type AnchorProps = Omit<HTMLAnchorAttributes, 'href' | 'type'> & {
@@ -16,7 +16,7 @@
 
     type Props = (AnchorProps | ButtonProps) & {
         variant: 'default' | 'variant' | 'secondary';
-        icon?: typeof Icon;
+        icon?: typeof LucideIcon | Snippet;
         children?: Snippet;
     };
 
@@ -27,7 +27,6 @@
         href,
         ref,
         icon,
-        loading,
         children,
         ...rest
     }: Props = $props();
@@ -45,7 +44,9 @@
         .join(' ')
     );
 
-
+    function isSnippet(val: unknown): val is Snippet {
+        return typeof val === 'function' && !val.prototype;
+    }
 </script>
 
 <svelte:element
@@ -59,9 +60,15 @@
     class={classes}
     {...rest}
 >
-    {#if icon || loading}
-        {@const Icon = loading ? LoaderCircleIcon : icon}
-        <Icon size={iconSize} class="btn-icon" aria-hidden="true" />
+    {#if icon}
+        {#if isSnippet(icon)}
+            <div style={`width: ${iconSize}; height: ${iconSize}; display: inherit;`}>
+                {@render icon()}
+            </div>
+        {:else}
+            {@const Icon = icon}
+            <Icon size={iconSize} aria-hidden="true" />
+        {/if}
     {/if}
 
     {#if children}
@@ -70,7 +77,6 @@
 </svelte:element>
 
 <style>
-
     button {
         border: none;
         margin: 0;
@@ -167,5 +173,4 @@
         height: 100%;
         padding: var(--size-s4)
     }
-
 </style>
