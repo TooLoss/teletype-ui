@@ -11,6 +11,7 @@
         direction?: CSS.Properties['flexDirection'];
         align?: CSS.Properties['alignItems'];
         justify?: CSS.Properties['justifyContent'];
+        center?: boolean;
         wrap?: boolean;
         children?: Snippet;
     };
@@ -22,6 +23,7 @@
         direction = "row",
         align = "stretch",
         justify = 'flex-start',
+        center = true,
         wrap = true,
         children,
         style: customStyle,
@@ -36,7 +38,7 @@
         display: flex;
         ${padding ? `padding: var(--size-${padding});` : ''}
         ${margin ? `margin: var(--size-${margin});` : ''}
-        margin-inline: auto;
+        margin-inline: ${center ? 'auto' : 'initial'};
         width: 100%;
         gap: var(--size-${gap});
         flex-direction: ${direction};

@@ -74,6 +74,7 @@ a,
 li,
 div {
     text-wrap: balance;
+    font-size: var(--size-s3);
     color: var(--text-secondary);
 }
 
@@ -96,11 +97,11 @@ h2 {
 }
 
 h3 {
-    font-size: var(--size-s3);
+    font-size: var(--size-s2);
 }
 
 h4 {
-    font-size: var(--size-s4);
+    font-size: var(--size-s3);
 }
 
 a {
@@ -113,4 +114,15 @@ a:hover {
 
 a:active {
     color: var(--action-primary-active);
+}
+
+/* ANIMATIONS */
+
+@keyframes skeleton-pulse {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
 }

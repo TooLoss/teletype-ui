@@ -6,7 +6,9 @@
         Color,
         Button,
         Badge,
-        Frame
+        Frame,
+        Skeleton,
+        Separator
     } from "$lib/index.ts";
 
     import {
@@ -99,15 +101,35 @@
         </Frame>
     </Flex>
     <Frame outline={true}>
-        <p><b>Frame can have outline</b></p>
+        <Flex direction="column" gap="s3">
+            <Flex>
+                <Badge>Python</Badge>
+            </Flex>
+            <p><b>Frame can have outline</b></p>
+        </Flex>
     </Frame>
     <Frame outline={true} transparent={true}>
         <p><b>Frame can have outline and be transparent</b></p>
     </Frame>
-    <Frame variant="variant">
+    <Frame variant="secondary">
         <p><b>Frame can have outline and be transparent</b></p>
     </Frame>
-    <Frame variant="variant" outline={true}>
+    <Frame variant="secondary" outline={true}>
         <p><b>Frame can have outline and be transparent</b></p>
     </Frame>
+</Stack>
+
+<Stack>
+    <h2>Skeletons</h2>
+    <Flex direction="column" style="width: 50%;" center={false}>
+        <Skeleton style="height: 200px" />
+        <Skeleton />
+        <Skeleton />
+        <Skeleton />
+    </Flex>
+</Stack>
+
+<Stack>
+    <h2>Separators</h2>
+    <Separator />
 </Stack>

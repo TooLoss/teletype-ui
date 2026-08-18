@@ -26,14 +26,18 @@
         padding: var(--size-s2);
         background-color: var(--bg-app-variant);
         border-radius: var(--size-s3);
-        color: var(--bg-app);
+        color: white;
+    }
+
+    .frame :global(*) {
+        color: white;
     }
 
     .outline {
         border: 2px solid var(--border-strong);
     }
 
-    .frame-variant {
+    .frame-secondary {
         background-color: var(--bg-secondary);
         border-color: var(--border-secondary);
     }

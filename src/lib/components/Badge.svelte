@@ -37,11 +37,14 @@
         display: flex;
         align-items: center;
         gap: var(--size-s4);
-        background-color: var(--action-primary-default);
+        /* background-color: var(--action-primary-default); */
+        background-color: var(--bg-elevated);
         border-radius: var(--size-s3);
         color: var(--text-on-accent);
         border: 1px solid var(--color-primary-500);
         padding: var(--size-s5) var(--size-s4);
+        -webkit-box-shadow: 0px 2px 0px 1px #000000; 
+        box-shadow: 0px 2px 0px 1px #000000;
     }
 
     .icon {
