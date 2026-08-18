@@ -9,7 +9,13 @@
         Frame,
         Skeleton,
         Separator,
-        TableOfContents
+        TableOfContents,
+        Scroll,
+        Card
+    } from "$lib/index.ts";
+
+    import {
+        typewriter
     } from "$lib/index.ts";
 
     import {
@@ -19,20 +25,20 @@
 
 <Header top="s1">
     <Stack>
-    <Flex justify="space-between" align="center" style="width: 100%;" gap="s1">
-        <Flex direction="column" gap="s4">
-            <h1>teletype-ui</h1>
-            <p>UI Component Library</p>
+        <Flex justify="space-between" align="center" style="width: 100%;" gap="s1">
+            <Flex direction="column" gap="s4">
+                <h1 use:typewriter={{ duration: 400, inViewOptions: { threshold: 0.5 } }}>teletype-ui</h1>
+                <p>UI Component Library</p>
+            </Flex>
+            <span style="height: 100px; width: 100px; background-color: var(--bg-app-variant)">
+            </span>
         </Flex>
-        <span style="height: 100px; width: 100px; background-color: var(--bg-app-variant)">
-        </span>
-    </Flex>
     </Stack>
 </Header>
 
 <Color>
     <Stack>
-        <h2>Why ?</h2>
+        <h2  use:typewriter={{ duration: 400, delay: 100, inViewOptions: { threshold: 1 } }}>Why ?</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </Stack>
 </Color>
@@ -48,6 +54,28 @@
 <Stack>
     <h1>Showcase</h1>
     <p>Each and every components and tokens from the UI library.</p>
+</Stack>
+
+<Stack>
+    <h2>Layouts</h2>
+
+    <Stack>
+        <h3>Flex Layout</h3>
+        <Flex>
+            {#each Array(40) as _}
+                <Badge>test</Badge>
+            {/each}
+        </Flex>
+    </Stack>
+
+    <Stack>
+        <h3>Scroll Layout</h3>
+        <Scroll>
+            {#each Array(40) as _}
+                <Badge>test</Badge>
+            {/each}
+        </Scroll>
+    </Stack>
 </Stack>
 
 <Stack>
@@ -70,7 +98,7 @@
             {#snippet icon()}
                 <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
             {/snippet}
-            Voir sur GitHub
+            See on Github
         </Button>
     </Flex>
     <Flex>
@@ -147,37 +175,24 @@
 
 <Stack>
     <h2>Advanced Components</h2>
-    <Flex>
-        <Frame outline={true}>
-            <Flex direction="column" style="width: calc(350px - 2*var(--size-s2));">
-                <div style="
-                    background-color: white;
-                    width: 350px;
-                    height: 180px;
-                    margin: 0 calc(-1 * var(--size-s2));
-                    margin-top: calc(-1 * var(--size-s2));
-                    border-radius: var(--size-s3) var(--size-s3) 0 0;
-                ">
-                </div>
-                <Flex gap="s4" style="margin: 0 -2px">
-                    <Badge>
-                        {#snippet icon()}
-                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Python</title><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></svg>
-                        {/snippet}
-                        Python
-                    </Badge>
-                    <Badge>C++</Badge>
-                </Flex>
-                <Flex direction="column" gap="s4">
-                    <h4><b>Card Test</b></h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </Flex>
-                <Flex style="margin-top: var(--size-s4);">
-                    <Button style="margin-left: auto;" variant="secondary">Voir Plus</Button>
-                </Flex>
-            </Flex>
-        </Frame>
-    </Flex>
+    
+    <Stack>
+        <h3>Cards</h3>
+        <Scroll>
+            <Card
+                badges={[
+                    { icon: Check, children: 'Top Rated' },
+                    { children: 'Sale' }
+                ]}
+            />
+            <Card
+                src="https://picsum.photos/200/300"
+                title="When data here"
+                paragraph="No loading needed."
+
+            />
+        </Scroll>
+    </Stack>
 </Stack>
 
 </article>

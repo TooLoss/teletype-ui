@@ -2,15 +2,15 @@
     import type { Snippet } from 'svelte';
     import { type LucideIcon } from '@lucide/svelte';
 
-    type Props = {
+    export type BadgeProps = {
         icon?: typeof LucideIcon | Snippet;
-        children?: Snippet;
+        children?: Snippet | string | number;
     };
 
     let {
         icon,
         children
-    }: Props = $props();
+    }: BadgeProps = $props();
 
     function isSnippet(val: unknown): val is Snippet {
         return typeof val === 'function' && !val.prototype;
@@ -29,7 +29,13 @@
         {/if}
     {/if}
 
-    {@render children?.()}
+    {#if children}
+        {#if isSnippet(children)}
+            {@render children()}
+        {:else}
+            {children}
+        {/if}
+    {/if}
 </div>
 
 <style>
@@ -43,8 +49,8 @@
         color: var(--text-on-accent);
         border: 1px solid var(--color-primary-500);
         padding: var(--size-s5) var(--size-s4);
-        -webkit-box-shadow: 0px 2px 0px 1px #000000; 
-        box-shadow: 0px 2px 0px 1px #000000;
+        -webkit-box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.5); 
+        box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.5);
         font-family: "Space Mono";
         /* The padding give a unablance result */
         padding-bottom: calc(var(--size-s5) + 1px);
