@@ -24,7 +24,7 @@
             <h1>teletype-ui</h1>
             <p>UI Component Library</p>
         </Flex>
-        <span style="height: 100px; width: 100px; background-color: var(--bg-elevated)">
+        <span style="height: 100px; width: 100px; background-color: var(--bg-app-variant)">
         </span>
     </Flex>
     </Stack>

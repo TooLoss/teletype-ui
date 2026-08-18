@@ -44,14 +44,14 @@
 {#if headings.length > 0}
     <nav class="toc" aria-label="Table of contents">
         <Flex direction="column">
-            <h3 class="muted">On this page</h3>
+            <h3>On this page</h3>
             <ul>
                 <Flex direction="column" gap="s5">
                     {#each headings as { id, text, level }}
                         <li class="text-level{level}">
                             <Flex wrap={false} align="center" gap="s4">
                                 <span class="separator level{level}"></span>
-                                <a href="#{id}">{text}</a>
+                                <a class="muted" href="#{id}">{text}</a>
                             </Flex>
                         </li>
                     {/each}
