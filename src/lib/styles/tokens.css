@@ -66,3 +66,10 @@
     /* Global States */
     --stack-max-width: min(800px, 100%);
 }
+
+@media (max-width: 768px) {
+  :root {
+    --spacing-ratio: 1.5;
+    --size-s3: 0.875rem;
+  }
+}

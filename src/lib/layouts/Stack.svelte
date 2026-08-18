@@ -21,6 +21,6 @@
 
 <!-- Use Flex to align items vertically -->
 
-<Flex direction="column" align={align} gap={gap} style="padding: var(--size-s1) 0" {...rest}>
+<Flex direction="column" align={align} gap={gap} style="padding: calc(var(--size-s1)*0.75) var(--size-s3)" {...rest}>
     {@render children?.()}
 </Flex>
