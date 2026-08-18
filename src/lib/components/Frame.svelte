@@ -23,15 +23,15 @@
 
 <style>
     .frame {
-        padding: var(--size-s2);
+        padding: calc((var(--size-s3) + 1.5*var(--size-s2))/2) var(--size-s2);
         background-color: var(--bg-app-variant);
         border-radius: var(--size-s3);
         color: white;
     }
 
-    .frame :global(*) {
-        color: white;
-    }
+    /* .frame :global(*) { */
+    /*     color: white; */
+    /* } */
 
     .outline {
         border: 2px solid var(--border-strong);

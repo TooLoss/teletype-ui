@@ -99,7 +99,7 @@
         gap: var(--size-s3);
         color: var(--bg-app);
         padding: var(--size-s4) var(--size-s3);
-        border-radius: var(--size-s2);
+        border-radius: var(--size-s3);
         font-weight: 700;
         font-family: "Space Mono";
         /* border: 1px solid var(--border-strong); */
