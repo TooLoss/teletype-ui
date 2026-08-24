@@ -102,8 +102,7 @@
         border-radius: var(--size-s2);
         font-weight: 700;
         font-family: "Space Mono";
-        border: 1px solid var(--border-strong);
-        box-shadow: 0px 3px 0px 1px var(--border-strong);
+        /* border: 1px solid var(--border-strong); */
         cursor: pointer;
         text-decoration: none;
         transition: 
@@ -120,52 +119,50 @@
 
     .btn-default {
         background-color: var(--action-primary-default);
-        box-shadow: 0px 2px 0px 1px var(--action-primary-active);
+        box-shadow: 0px 2px 0px 1px color-mix(in srgb, var(--action-primary-default) var(--shadow-power), black);
     }
 
     .btn-default:hover:not(:disabled) {
         background-color: var(--action-primary-hover);
-        border-color: var(--action-primary-hover);
+        box-shadow: 0px 2px 0px 1px color-mix(in srgb, var(--action-primary-hover) var(--shadow-power), black);
     }
 
     .btn-default:active:not(:disabled) {
         background-color: var(--action-primary-active);
-        box-shadow: 0px 1px 0px 1px var(--border-subtle);
+        box-shadow: 0px 0px 0px 0px;
         border-color: var(--action-primary-active);
     }
 
     .btn-secondary {
-        background-color: var(--bg-white);
-        box-shadow: 0px 2px 0px 1px var(--text-muted);
-        border-color: var(--text-secondary);
+        background-color: #fafafa;
+        box-shadow: 0px 2px 0px 1px color-mix(in srgb, #fafafa var(--shadow-power), black);
     }
 
     .btn-secondary:hover:not(:disabled) {
-        background-color: var(--text-secondary);
-        box-shadow: 0px 2px 0px 1px var(--text-muted);
+        background-color: #e0e0e0;
+        box-shadow: 0px 2px 0px 1px color-mix(in srgb, #e0e0e0 var(--shadow-power), black);
     }
 
     .btn-secondary:active:not(:disabled) {
-        background-color: var(--text-muted);
-        border-color: var(--text-muted);
-        box-shadow: 0px 1px 0px 1px var(--border-subtle);
+        background-color: #bfbfbf;
+        box-shadow: 0px 0px 0px 0px;
     }
 
     .btn-variant {
         background-color: var(--action-secondary-default);
-        box-shadow: 0px 2px 0px 1px var(--action-secondary-hover);
+        box-shadow: 0px 2px 0px 1px color-mix(in srgb, var(--action-secondary-default) var(--shadow-power), black);
         border-color: var(--action-secondary-active);
     }
 
     .btn-variant:hover:not(:disabled) {
         background-color: var(--action-secondary-hover);
+        box-shadow: 0px 2px 0px 1px color-mix(in srgb, var(--action-secondary-hover) var(--shadow-power), black);
         box-shadow: 0px 2px 0px 1px var(--action-secondary-active);
     }
 
     .btn-variant:active:not(:disabled) {
         background-color: var(--action-secondary-active);
-        border-color: var(--action-secondary-active);
-        box-shadow: 0px 1px 0px 1px var(--action-secondary-active);
+        box-shadow: 0px 0px 0px 0px;
     }
 
     .btn-icon-only {

@@ -39,7 +39,7 @@
         gap: var(--size-s4);
         background-color: var(--action-primary-default);
         border-radius: var(--size-s3);
-        color: var(--bg-app);
+        color: var(--text-on-accent);
         border: 1px solid var(--color-primary-500);
         padding: var(--size-s5) var(--size-s4);
     }

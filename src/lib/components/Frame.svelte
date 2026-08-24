@@ -30,12 +30,12 @@
     }
 
     .outline {
-        border: 1px solid var(--border-strong);
+        border: 2px solid var(--border-strong);
     }
 
     .frame-variant {
-        background-color: var(--color-secondary-800);
-        border-color: var(--color-secondary-300);
+        background-color: var(--bg-secondary);
+        border-color: var(--border-secondary);
     }
 
     .transparent {
