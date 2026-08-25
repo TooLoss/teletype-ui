@@ -60,7 +60,7 @@
         width: 140%;
         max-width: 100%;
         min-width: 0;
-        margin: 0 -20px;
+        margin: 1px -20px;
     }
 
     .has-fade {

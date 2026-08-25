@@ -20,16 +20,19 @@
 
 <style>
     .skeleton {
+        --light-gray:  oklch(30%  calc(var(--primary-base-chroma)*0.2)  var(--hue-primary));
+        --dark-gray:   oklch(25%  calc(var(--primary-base-chroma)*0.23)  var(--hue-primary));
+
         flex-grow: 1;
         border-radius: var(--size-s5);
         padding: var(--size-s4) 0;
         display: block;
-        background-color: var(--color-primary-gray-1);
+        background-color: var(--light-gray);
         background-image: linear-gradient(
             90deg,
-            var(--color-primary-gray-1) 0%,
-            var(--color-primary-gray-2) 50%,
-            var(--color-primary-gray-1) 100%
+            var(--light-gray) 0%,
+            var(--dark-gray) 50%,
+            var(--light-gray) 100%
         );
         background-size: 200% 100%;
         background-repeat: no-repeat;

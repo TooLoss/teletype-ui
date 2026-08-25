@@ -30,7 +30,7 @@
     }
 
     .outline {
-        border: 1px solid var(--border-strong);
+        border: 2px solid var(--border-strong);
     }
 
     .frame-secondary {

@@ -52,6 +52,7 @@
         -webkit-box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.1); 
         box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.1);
         font-family: "Space Mono";
+        font-weight: 800;
         /* The padding give a unablance result */
         padding-bottom: calc(var(--size-s5) + 1px);
     }

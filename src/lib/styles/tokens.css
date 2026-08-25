@@ -15,7 +15,7 @@
 
     /* COLORS */
 
-    --hue-primary: 260deg;
+    --hue-primary: 250deg;
     --hue-secondary: calc(var(--hue-primary) + 40deg);
     
     --primary-base-chroma: 0.15;
