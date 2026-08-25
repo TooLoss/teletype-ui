@@ -113,7 +113,7 @@
     }
 
     .btn:active:not(:disabled) {
-        transform: translateY(2px);
+        transform: translateY(3px);
         box-shadow: 0px 1px 0px 1px var(--border-strong);
     }
 
