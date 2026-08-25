@@ -42,7 +42,7 @@
 
     /* Text Hierarchy */
     --text-primary:    oklch(96% 0.01 var(--hue-primary));
-    --text-secondary:  oklch(75% 0.02 var(--hue-primary));
+    --text-secondary:  oklch(85% 0.02 var(--hue-primary));
     --text-muted:      oklch(60% 0.02 var(--hue-primary));
     --text-on-accent:  oklch(15% 0.02 var(--hue-primary));
 

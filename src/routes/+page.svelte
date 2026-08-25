@@ -39,9 +39,19 @@
 </Header>
 
 <Color>
-    <Stack>
+    <Stack gap="s2">
         <h2  use:typewriter={{ duration: 400, delay: 100, inViewOptions: { threshold: 1 } }}>Why ?</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <Stack padding={false}>
+            <p style="text-indent:10px;">
+                I built this UI library to push Svelte to its limits while learning what it really takes to design a solid interface.
+            </p>
+            <p style="text-indent:10px;">
+                The aesthetic is inspired by classic computer science tools, using monospace fonts and clean blue accents, making it a great fit for a developer portfolio or technical project showcase. Custom animations give the components a distinct feel so they don't look like generic templates.
+            </p>
+            <p style="text-indent:10px;">
+                Building this toolkit now saves me time when setting up future projects, including my own portfolio.
+            </p>
+        </Stack>
     </Stack>
 </Color>
 
@@ -192,7 +202,7 @@
                 ]}
             />
             <Card
-                src="https://picsum.photos/200/300"
+                src="https://picsum.photos/2000/1000"
                 title="When data here"
                 paragraph="No loading needed."
 

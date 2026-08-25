@@ -7,12 +7,14 @@
 
     type Props = HTMLAttributes<HTMLElement> & {
         gap?: Size;
+        padding?: boolean;
         align?: CSS.Properties['alignItems'];
         children?: Snippet;
     };
 
     let {
         gap = 's3',
+        padding = true,
         align = 'stretch',
         children,
         ...rest
@@ -21,6 +23,6 @@
 
 <!-- Use Flex to align items vertically -->
 
-<Flex direction="column" align={align} gap={gap} style="padding: calc(var(--size-s1)*0.75) var(--size-s3)" {...rest}>
+<Flex direction="column" align={align} gap={gap} style={`${padding ? 'padding: calc(var(--size-s1)*0.75) var(--size-s3)' : ''}`} {...rest}>
     {@render children?.()}
 </Flex>

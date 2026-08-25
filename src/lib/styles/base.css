@@ -73,7 +73,7 @@ label,
 a,
 li,
 div {
-    text-wrap: balance;
+    text-wrap: auto;
     font-size: var(--size-s3);
     color: var(--text-secondary);
 }

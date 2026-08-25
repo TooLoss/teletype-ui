@@ -33,7 +33,7 @@
     }
 </script>
 
-<Frame outline={true}>
+<Frame outline={false}>
     <Flex wrap={false} direction="column" style="width: calc(350px - 2*var(--size-s2)); height: 100%;">
         {#if src && !loading}
             <img
