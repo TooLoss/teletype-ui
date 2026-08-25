@@ -57,18 +57,19 @@
 <style>
     .scroll-container {
         position: relative;
-        width: 140%;
-        max-width: 100%;
+        width: calc(100% + 20px);
+        max-width: calc(100% + 20px);
+        margin-inline: -10px;
         min-width: 0;
-        margin: 1px -20px;
+        overflow: hidden;
     }
 
     .has-fade {
         --mask: linear-gradient(
             to right,
             transparent 0,
-            black var(--fade-size, 2rem),
-            black calc(100% - var(--fade-size, 2rem)),
+            black var(--fade-size, 1rem),
+            black calc(100% - var(--fade-size, 1rem)),
             transparent 100%
         );
         -webkit-mask-image: var(--mask);
@@ -76,16 +77,24 @@
     }
 
     :global(.scroll-content) {
+        display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
         overflow-y: hidden;
-        white-space: nowrap;
         width: 100%;
+        max-width: 100%;
+        min-width: 0;
         scrollbar-width: thin;
         -webkit-overflow-scrolling: touch;
-        padding: 0 20px;
+        padding: 2px 10px;
+        box-sizing: border-box;
     }
 
+    :global(.scroll-content > *) {
+        flex-shrink: 0;
+    }
+
+    /* hide cursor if touchscreen device */
     @media (pointer: coarse), (hover: none) {
         :global(.scroll-content) {
             scrollbar-width: none;
@@ -97,3 +106,4 @@
         }
     }
 </style>
+
