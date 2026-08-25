@@ -21,7 +21,7 @@
         padding,
         margin,
         fade = true,
-        fadeSize = '1rem',
+        fadeSize = '0.5rem',
         gap = "s3",
         align = "stretch",
         justify = 'flex-start',
