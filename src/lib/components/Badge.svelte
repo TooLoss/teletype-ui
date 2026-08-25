@@ -49,8 +49,8 @@
         color: var(--text-on-accent);
         border: 1px solid var(--color-primary-500);
         padding: var(--size-s5) var(--size-s4);
-        -webkit-box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.5); 
-        box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.1); 
+        box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.1);
         font-family: "Space Mono";
         /* The padding give a unablance result */
         padding-bottom: calc(var(--size-s5) + 1px);

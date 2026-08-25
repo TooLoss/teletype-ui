@@ -15,7 +15,8 @@
     } from "$lib/index.ts";
 
     import {
-        typewriter
+        typewriter,
+        hackreveal
     } from "$lib/index.ts";
 
     import {
@@ -26,11 +27,12 @@
 <Header top="s1">
     <Stack>
         <Flex justify="space-between" align="center" style="width: 100%;" gap="s1">
-            <Flex direction="column" gap="s4">
-                <h1 use:typewriter={{ duration: 400, inViewOptions: { threshold: 0.5 } }}>teletype-ui</h1>
+            <Flex direction="column" gap="s4" style="width: auto;" center={false}>
+                <h1 use:hackreveal={{ duration: 1500, inViewOptions: { threshold: 0.5 } }}>teletype-ui</h1>
                 <p>UI Component Library</p>
             </Flex>
             <span style="height: 100px; width: 100px; background-color: var(--bg-app-variant)">
+
             </span>
         </Flex>
     </Stack>
@@ -45,7 +47,7 @@
 
 <Stack>
     <Flex direction="column">
-        <TableOfContents depth={2}/>
+        <TableOfContents depth={3}/>
     </Flex>
 </Stack>
 
@@ -63,7 +65,8 @@
         <h3>Flex Layout</h3>
         <Flex>
             {#each Array(40) as _}
-                <Badge>test</Badge>
+                <span style="width: 10px; height: 10px; background-color: var(--bg-elevated);">
+                </span>
             {/each}
         </Flex>
     </Stack>
@@ -72,7 +75,8 @@
         <h3>Scroll Layout</h3>
         <Scroll>
             {#each Array(40) as _}
-                <Badge>test</Badge>
+                <span style="display: block; flex-shrink: 0; width: 30px; height: 30px; background-color: var(--bg-elevated);">
+                </span>
             {/each}
         </Scroll>
     </Stack>

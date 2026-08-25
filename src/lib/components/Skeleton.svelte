@@ -24,12 +24,12 @@
         border-radius: var(--size-s5);
         padding: var(--size-s4) 0;
         display: block;
-        background-color: rgba(128, 128, 128, 1);
+        background-color: var(--color-primary-gray-1);
         background-image: linear-gradient(
             90deg,
-            rgba(128, 128, 128, 1) 0%,
-            rgba(64, 64, 64, 1) 50%,
-            rgba(128, 128, 128, 1) 100%
+            var(--color-primary-gray-1) 0%,
+            var(--color-primary-gray-2) 50%,
+            var(--color-primary-gray-1) 100%
         );
         background-size: 200% 100%;
         background-repeat: no-repeat;

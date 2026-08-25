@@ -1,20 +1,22 @@
 import { observeInView, type InViewOptions } from '../utils/inView';
 import { easings, type EasingName } from '../utils/ease';
 
-export interface TypewriterOptions {
+export interface HackReveal {
     duration?: number;
     delay?: number;
     easing?: EasingName;
+    randomList?: string;
     trigger?: 'inView' | 'mount' | 'manual';
     inViewOptions?: InViewOptions;
     onComplete?: () => void;
 }
 
-export function typewriter(node: HTMLElement, options: TypewriterOptions = {}) {
+export function hackreveal(node: HTMLElement, options: HackReveal = {}) {
     let {
         duration = 1000,
         delay = 0,
         easing = 'easeOutQuad',
+        randomList = '&$@|/}{*%#[]()!?',
         trigger = 'inView',
         inViewOptions = { threshold: 0.2, once: true },
         onComplete
@@ -33,20 +35,27 @@ export function typewriter(node: HTMLElement, options: TypewriterOptions = {}) {
         if (timeoutId !== null) clearTimeout(timeoutId);
     }
 
+    function getRandomString(length: number, chars = randomList) {
+        let result = '';
+        for (let i = 0; i < length; i++) {
+            result += chars[Math.floor(Math.random() * chars.length)];
+        }
+        return result;
+    }
+
     function play() {
         cleanupTimers();
-        node.textContent = '⠀';
+        node.textContent = getRandomString(totalChars, randomList);
 
         if (totalChars === 0) {
             onComplete?.();
             return;
         }
 
-        const easeFn = easings[easing] ?? easings.linear ?? ((t: number) => t);
+        const easeFn = easings[easing] ?? ((t: number) => t);
 
         timeoutId = setTimeout(() => {
             let startTime: number | null = null;
-            let lastRenderedIndex = 0;
 
             function step(currentTime: number) {
                 if (!startTime) startTime = currentTime;
@@ -56,10 +65,9 @@ export function typewriter(node: HTMLElement, options: TypewriterOptions = {}) {
                 const easedProgress = easeFn(progress);
                 const targetCharCount = Math.floor(easedProgress * totalChars);
 
-                if (targetCharCount !== lastRenderedIndex) {
-                    node.textContent = originalText.slice(0, targetCharCount);
-                    lastRenderedIndex = targetCharCount;
-                }
+                const randomText = getRandomString(totalChars - targetCharCount, randomList);
+                const revealedText = originalText.slice(0, targetCharCount);
+                node.textContent = `${revealedText}${randomText}`;
 
                 if (progress < 1) {
                     rafId = requestAnimationFrame(step);
@@ -68,7 +76,7 @@ export function typewriter(node: HTMLElement, options: TypewriterOptions = {}) {
                     cleanupTimers();
                     onComplete?.();
                     node.dispatchEvent(
-                        new CustomEvent('typewriter_complete', {
+                        new CustomEvent('hackreveal_complete', {
                             detail: { duration, avgSpeed, totalChars }
                         })
                     );
@@ -101,10 +109,12 @@ export function typewriter(node: HTMLElement, options: TypewriterOptions = {}) {
     }
 
     return {
-        update(newOptions: TypewriterOptions) {
-            duration = newOptions.duration ?? 1000;
-            delay = newOptions.delay ?? 0;
-            easing = newOptions.easing ?? 'easeOutQuad';
+        play,
+        update(newOptions: HackReveal) {
+            duration = newOptions.duration ?? duration;
+            delay = newOptions.delay ?? delay;
+            easing = newOptions.easing ?? easing;
+            randomList = newOptions.randomList ?? randomList;
         },
         destroy() {
             cleanupTimers();

@@ -46,6 +46,7 @@
                     margin: 0 calc(-1 * var(--size-s2));
                     margin-top: calc(-1 * var(--size-s2));
                     border-radius: var(--size-s3) var(--size-s3) 0 0;
+                    object-fit: cover;
                 `}
             />
         {:else}
@@ -79,7 +80,6 @@
                 <p>{paragraph}</p>
             {:else}
                 <Flex direction="column" gap="s4">
-                    <Skeleton />
                     <Skeleton />
                     <Skeleton />
                 </Flex>
