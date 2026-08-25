@@ -47,7 +47,9 @@
 
 <Stack>
     <Flex direction="column">
+        <Separator />
         <TableOfContents depth={3}/>
+        <Separator />
     </Flex>
 </Stack>
 

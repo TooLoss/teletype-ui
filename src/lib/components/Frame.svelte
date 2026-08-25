@@ -29,12 +29,8 @@
         color: white;
     }
 
-    /* .frame :global(*) { */
-    /*     color: white; */
-    /* } */
-
     .outline {
-        border: 2px solid var(--border-strong);
+        border: 1px solid var(--border-strong);
     }
 
     .frame-secondary {
