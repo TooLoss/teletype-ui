@@ -41,7 +41,7 @@
 <Color>
     <Stack gap="s2">
         <h2  use:typewriter={{ duration: 400, delay: 100, inViewOptions: { threshold: 1 } }}>Why ?</h2>
-        <Stack padding={false}>
+        <Stack paddingDirection='none'>
             <p style="text-indent:10px;">
                 I built this UI library to push Svelte to its limits while learning what it really takes to design a solid interface.
             </p>
@@ -58,7 +58,9 @@
 <Stack>
     <Flex direction="column">
         <Separator />
-        <TableOfContents depth={3}/>
+        <Stack paddingDirection='horizontal' paddingHorizontal='s1'>
+            <TableOfContents depth={3}/>
+        </Stack>
         <Separator />
     </Flex>
 </Stack>
