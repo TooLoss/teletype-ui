@@ -5,10 +5,10 @@
 
 <style>
     hr {
-        color: var(--color-primary-800);
-        background-color: var(--color-primary-800);
-        border-color: var(--color-primary-800);
-        margin: var(--size-s1) 10px;
+        color: var(--bg-app-variant);
+        background-color: var(--bg-app-variant);
+        border-color: var(--bg-app-variant);
+        margin: var(--size-s1) -20px;
         border-width: 2px;
         border-radius: 0;
     }
