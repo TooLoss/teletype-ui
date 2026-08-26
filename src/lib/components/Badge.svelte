@@ -1,41 +1,44 @@
 <script lang="ts">
-    import type { Snippet } from 'svelte';
-    import { type LucideIcon } from '@lucide/svelte';
+    import type { HTMLAttributes } from 'svelte/elements';
+    import type { Component } from 'svelte';
+    import type { LucideIcon } from '@lucide/svelte';
 
-    export type BadgeProps = {
-        icon?: typeof LucideIcon | Snippet;
-        children?: Snippet | string | number;
+    type Props = HTMLAttributes<HTMLDivElement> & {
+        icon?: Component | LucideIcon;
+        enlargement?: number;
+        top?: number;
+        left?: number;
     };
 
     let {
         icon,
+        enlargement = 0,
+        top = 0,
+        left = 0,
         children
-    }: BadgeProps = $props();
+    }: Props = $props();
 
-    function isSnippet(val: unknown): val is Snippet {
-        return typeof val === 'function' && !val.prototype;
-    }
+    const iconSize = '1.1em';
 </script>
 
 <div class="badge">
     {#if icon}
-        {#if isSnippet(icon)}
-            <div class="icon">
-                {@render icon()}
-            </div>
-        {:else}
-            {@const Icon = icon}
-            <Icon size={12} />
-        {/if}
+        {@const Icon = icon}
+        <div
+            class="icon-container"
+            style={`
+                --icon-size: ${iconSize};
+                --icon-top: ${top}px;
+                --icon-left: ${left}px;
+                --enlargement: ${enlargement}px;
+            `}
+        >
+            <Icon size="1em" class="icon" aria-hidden="true" />
+        </div>
+
     {/if}
 
-    {#if children}
-        {#if isSnippet(children)}
-            {@render children()}
-        {:else}
-            {children}
-        {/if}
-    {/if}
+    {@render children?.()}
 </div>
 
 <style>
@@ -54,13 +57,20 @@
         font-family: "Space Mono";
         font-weight: 800;
         /* The padding give a unablance result */
-        padding-bottom: calc(var(--size-s5) + 1px);
+        padding-bottom: calc(var(--size-s5) - 1px);
     }
 
-    .icon {
-        display: inherit;
-        width: 12px;
-        height: 12px;
-        align-items: center;
+    .icon-container {
+        width: calc(var(--icon-size) + var(--enlargement));
+        height: var(--icon-size);
+    }
+
+    :global(.icon-container > svg) {
+        position: relative;
+        top: var(--icon-top);
+        left: var(--icon-left);
+        width: 100%;
+        height: 100%;
+        color: var(--text-on-accent);
     }
 </style>

@@ -1,5 +1,6 @@
 <script lang="ts">
-    import { type LucideIcon } from '@lucide/svelte';
+    import type { LucideIcon } from '@lucide/svelte';
+    import type { Component } from 'svelte';
     import type { HTMLAnchorAttributes, HTMLButtonAttributes } from 'svelte/elements';
 
     type AnchorProps = Omit<HTMLAnchorAttributes, 'href' | 'type'> & {
@@ -16,8 +17,10 @@
 
     type Props = (AnchorProps | ButtonProps) & {
         variant: 'default' | 'variant' | 'secondary';
-        icon?: typeof LucideIcon | Snippet;
-        children?: Snippet;
+        icon?: LucideIcon | Component;
+        enlargement?: number;
+        top?: number;
+        left?: number;
     };
 
     let {
@@ -25,8 +28,10 @@
         type = 'button',
         disabled = false,
         href,
-        ref,
         icon,
+        enlargement = 0,
+        top = 0,
+        left = 0,
         children,
         ...rest
     }: Props = $props();
@@ -43,10 +48,6 @@
         .filter(Boolean)
         .join(' ')
     );
-
-    function isSnippet(val: unknown): val is Snippet {
-        return typeof val === 'function' && !val.prototype;
-    }
 </script>
 
 <svelte:element
@@ -56,19 +57,22 @@
     {disabled}
     aria-disabled={disabled}
     tabindex={href && disabled ? -1 : undefined}
-    bind:this={ref}
     class={classes}
     {...rest}
 >
     {#if icon}
-        {#if isSnippet(icon)}
-            <div style={`width: ${iconSize}; height: ${iconSize}; display: inherit;`}>
-                {@render icon()}
-            </div>
-        {:else}
-            {@const Icon = icon}
+        {@const Icon = icon}
+        <div
+            class="icon-container"
+            style={`
+                --icon-size: ${iconSize};
+                --icon-top: ${top}px;
+                --icon-left: ${left}px;
+                --enlargement: ${enlargement}px;
+            `}
+        >
             <Icon size={iconSize} aria-hidden="true" />
-        {/if}
+        </div>
     {/if}
 
     {#if children}
@@ -169,5 +173,19 @@
         aspect-ratio: 1 / 1;
         height: 100%;
         padding: var(--size-s4)
+    }
+
+    .icon-container {
+        width: calc(var(--icon-size) + var(--enlargement));
+        height: var(--icon-size);
+    }
+
+    :global(.icon-container > svg) {
+        position: relative;
+        top: var(--icon-top);
+        left: var(--icon-left);
+        width: 100%;
+        height: 100%;
+        color: var(--text-on-accent);
     }
 </style>
