@@ -29,9 +29,6 @@
         disabled = false,
         href,
         icon,
-        enlargement = 0,
-        top = 0,
-        left = 0,
         children,
         ...rest
     }: Props = $props();
@@ -66,9 +63,6 @@
             class="icon-container"
             style={`
                 --icon-size: ${iconSize};
-                --icon-top: ${top}px;
-                --icon-left: ${left}px;
-                --enlargement: ${enlargement}px;
             `}
         >
             <Icon size={iconSize} aria-hidden="true" />
@@ -183,7 +177,7 @@
         position: relative;
         top: var(--icon-top);
         left: var(--icon-left);
-        width: 100%;
+        width: auto;
         height: 100%;
         color: var(--text-on-accent);
     }
