@@ -13,6 +13,8 @@
     --size-s1: calc(var(--size-s3) * 2.3 * var(--spacing-ratio));
     --size-zero: 0;
 
+    --border-radius: 0;
+
     /* COLORS */
 
     --hue-primary: 250deg;
@@ -68,8 +70,8 @@
 }
 
 @media (max-width: 768px) {
-  :root {
-    --spacing-ratio: 1.5;
-    --size-s3: 0.875rem;
-  }
+    :root {
+        --spacing-ratio: 1.5;
+        --size-s3: 0.875rem;
+    }
 }
