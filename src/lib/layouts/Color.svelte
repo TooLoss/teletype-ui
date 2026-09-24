@@ -15,9 +15,7 @@
     }: Props = $props();
 </script>
 
-<!-- This layout doesn't change align behavior, it just color the background -->
-
-<div style={`width: 100%;  background-color: var(${color}); margin-bottom: calc(var(--size-s1)*0.75);`}>
+<div style={`width: 100%;  background-color: var(${color}); margin-bottom: calc(var(--size-s1)*0.75);`} {...rest}>
     <Stack>
         {@render children?.()}
     </Stack>
