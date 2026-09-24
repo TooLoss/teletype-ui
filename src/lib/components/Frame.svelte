@@ -25,7 +25,7 @@
     .frame {
         padding: calc((var(--size-s3) + 1.5*var(--size-s2))/2) var(--size-s2);
         background-color: var(--bg-app-variant);
-        border-radius: var(--size-s3);
+        border-radius: var(--border-radius);
         color: white;
     }
 

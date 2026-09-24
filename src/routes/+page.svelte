@@ -10,18 +10,17 @@
         Skeleton,
         Separator,
         TableOfContents,
-        Scroll,
-        Card
-    } from "$lib/index.ts";
+        Scroll
+    } from '$lib/index';
 
     import {
         typewriter,
         hackreveal
-    } from "$lib/index.ts";
+    } from '$lib/index';
 
     import {
         Check
-    } from "@lucide/svelte";
+    } from '@lucide/svelte';
 
     import Github from '$lib/internal/Github.svelte';
 </script>

@@ -3,4 +3,4 @@ export * from './layouts/index.js';
 export * from './components/index.js';
 export * from './animations/index.js';
 
-export type { Size } from './types.d';
+export type { Size } from './types.d.ts';

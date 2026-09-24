@@ -106,7 +106,6 @@
         border-radius: var(--size-s3);
         font-weight: 700;
         font-family: "Space Mono";
-        /* border: 1px solid var(--border-strong); */
         cursor: pointer;
         text-decoration: none;
         transition: 
