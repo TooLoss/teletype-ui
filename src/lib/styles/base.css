@@ -116,6 +116,10 @@ a:active {
     color: var(--action-primary-active);
 }
 
+p {
+    text-indent: var(--size-s2);
+}
+
 button {
     appearance: none;
     border: none;

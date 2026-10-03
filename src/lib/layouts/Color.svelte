@@ -10,13 +10,23 @@
 
     let {
         children,
-        color = "--bg-app-variant",
         ...rest
     }: Props = $props();
 </script>
 
-<div style={`width: 100%;  background-color: var(${color}); margin-bottom: calc(var(--size-s1)*0.75);`} {...rest}>
+<div 
+    class="color"
+    {...rest}
+>
     <Stack>
         {@render children?.()}
     </Stack>
 </div>
+
+<style>
+    .color {
+        width: 100%;
+        margin-bottom: calc(var(--size-s1)*0.75);
+        background-color: var(--bg-app-variant);
+    }
+</style>

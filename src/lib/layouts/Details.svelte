@@ -10,8 +10,7 @@
         summarySnippet?: Snippet;
         framed?: boolean;
         transparent?: boolean;
-        shadow?: boolean;
-        border?: boolean;
+        outline?: boolean;
     };
 
     let {
@@ -19,8 +18,7 @@
         summarySnippet,
         framed = false,
         transparent = false,
-        shadow = false,
-        border = false,
+        outline = false,
         children,
         ...rest
     }: Props = $props();
@@ -31,8 +29,7 @@
 <Frame
     padding='zero'
     transparent={framed && transparent}
-    shadow={framed && shadow}
-    border={framed && border}
+    outline={framed && outline}
     variant="subtle"
     effect
     {...rest}
@@ -42,7 +39,7 @@
             <Flex gap="s4" align="center" wrap={false}>
                 <ChevronRight size={arrowSize} class="arrow" />
                 {#if !summarySnippet}
-                    <p class="summary-text">{summary}</p>
+                    <span class="summary-text">{summary}</span>
                 {:else}
                     {@render summarySnippet()}
                 {/if}

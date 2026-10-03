@@ -14,6 +14,7 @@
         align?: CSS.Properties['alignItems'];
         justify?: CSS.Properties['justifyContent'];
         center?: boolean;
+        hidebar?: boolean;
         children?: Snippet;
     };
 
@@ -26,6 +27,7 @@
         align = "stretch",
         justify = 'flex-start',
         center = true,
+        hidebar = false,
         children,
         style: customStyle,
         ...rest
@@ -35,6 +37,7 @@
 <div 
     class="scroll-container"
     class:has-fade={fade}
+    class:no-scrollbar={hidebar}
     style:--fade-size={fadeSize}
 >
     <Flex 
@@ -57,11 +60,22 @@
 <style>
     .scroll-container {
         position: relative;
-        width: calc(100% + 20px);
-        max-width: calc(100% + 20px);
-        margin-inline: -10px;
+        width: 100%;
+        max-width: 100%;
         min-width: 0;
-        overflow: hidden;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: thin;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .no-scrollbar {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
     }
 
     .has-fade {
@@ -79,31 +93,26 @@
     :global(.scroll-content) {
         display: flex;
         flex-wrap: nowrap;
-        overflow-x: auto;
-        overflow-y: hidden;
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        scrollbar-width: thin;
-        -webkit-overflow-scrolling: touch;
-        padding: 2px 10px;
+        width: max-content;
+        min-width: 100%;
+        max-width: none;
         box-sizing: border-box;
+        padding-bottom: 8px;
     }
 
     :global(.scroll-content > *) {
         flex-shrink: 0;
+        min-width: 0;
     }
 
-    /* hide cursor if touchscreen device */
     @media (pointer: coarse), (hover: none) {
-        :global(.scroll-content) {
+        .scroll-container {
             scrollbar-width: none;
             -ms-overflow-style: none;
         }
 
-        :global(.scroll-content)::-webkit-scrollbar {
+        .scroll-container::-webkit-scrollbar {
             display: none;
         }
     }
 </style>
-

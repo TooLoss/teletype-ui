@@ -1,0 +1,54 @@
+<svg width="22" xmlns="http://www.w3.org/2000/svg" height="22" id="screenshot-bb2c10a1-ae9b-8007-8008-bbd1f711df05" viewBox="0 0 22 22" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1">
+    <g id="shape-bb2c10a1-ae9b-8007-8008-bbd1f711df05">
+        <defs>
+            <clipPath id="frame-clip-bb2c10a1-ae9b-8007-8008-bbd1f711df05-render-1" class="frame-clip frame-clip-def">
+                <rect rx="0" ry="0" x="0" y="0" width="22" height="22" transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)"/>
+            </clipPath>
+        </defs>
+        <g class="frame-container-wrapper">
+            <g class="frame-container-blur">
+                <g class="frame-container-shadows">
+                    <g clip-path="url(#frame-clip-bb2c10a1-ae9b-8007-8008-bbd1f711df05-render-1)" fill="none">
+                        <g class="fills" id="fills-bb2c10a1-ae9b-8007-8008-bbd1f711df05">
+                            <rect rx="0" ry="0" x="0" y="0" width="22" height="22" transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" class="frame-background"/>
+                        </g>
+                        <g class="frame-children">
+                            <g id="shape-ccc69720-f8fa-80dd-8008-bbd1b6bc963e" rx="0" ry="0">
+                                <g id="shape-ccc69720-f8fa-80dd-8008-bbd1a54ca4aa">
+                                    <g class="fills" id="fills-ccc69720-f8fa-80dd-8008-bbd1a54ca4aa">
+                                        <ellipse cy="11" stroke-linejoin="round" transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" style="fill: none;" ry="10" fill="none" stroke-linecap="round" rx="10" cx="11"/>
+                                    </g>
+                                    <g fill="none" stroke-linejoin="round" stroke-linecap="round" id="strokes-7d89ac0b-8fdb-800a-8008-bbd27145f860-ccc69720-f8fa-80dd-8008-bbd1a54ca4aa" class="strokes">
+                                        <g class="stroke-shape">
+                                            <ellipse cx="11" cy="11" rx="10" ry="10" transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" style="fill: none; stroke-width: 2; stroke: rgb(0, 0, 0); stroke-opacity: 1;"/>
+                                        </g>
+                                    </g>
+                                </g>
+                                <g id="shape-ccc69720-f8fa-80dd-8008-bbd1a54ca4ab">
+                                    <g class="fills" id="fills-ccc69720-f8fa-80dd-8008-bbd1a54ca4ab">
+                                        <path d="M11,1C5.6666259765625,6.5999755859375,5.6666259765625,15.4000244140625,11,21C16.3333740234375,15.4000244140625,16.3333740234375,6.5999755859375,11,1" fill="none" stroke-linejoin="round" stroke-linecap="round" style="fill: none;"/>
+                                    </g>
+                                    <g fill="none" stroke-linejoin="round" stroke-linecap="round" id="strokes-7d89ac0b-8fdb-800a-8008-bbd2714614b5-ccc69720-f8fa-80dd-8008-bbd1a54ca4ab" class="strokes">
+                                        <g class="stroke-shape">
+                                            <path d="M11,1C5.6666259765625,6.5999755859375,5.6666259765625,15.4000244140625,11,21C16.3333740234375,15.4000244140625,16.3333740234375,6.5999755859375,11,1" style="fill: none; stroke-width: 2; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-linecap: round;"/>
+                                        </g>
+                                    </g>
+                                </g>
+                                <g id="shape-ccc69720-f8fa-80dd-8008-bbd1a54ce68e">
+                                    <g class="fills" id="fills-ccc69720-f8fa-80dd-8008-bbd1a54ce68e">
+                                        <path d="M1,11L21,11" fill="none" stroke-linejoin="round" stroke-linecap="round" style="fill: none;"/>
+                                    </g>
+                                    <g fill="none" stroke-linejoin="round" stroke-linecap="round" id="strokes-7d89ac0b-8fdb-800a-8008-bbd271467578-ccc69720-f8fa-80dd-8008-bbd1a54ce68e" class="strokes">
+                                        <g class="stroke-shape">
+                                            <path d="M1,11L21,11" style="fill: none; stroke-width: 2; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-linecap: round;"/>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

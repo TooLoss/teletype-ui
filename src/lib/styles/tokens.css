@@ -67,7 +67,7 @@
     --border-secondary:  oklch(55%                    calc(var(--secondary-base-chroma)*0.8)  var(--hue-secondary));
 
     /* Global States */
-    --stack-max-width: min(800px, 100%);
+    --stack-max-width: min(1000px, 100%);
 }
 
 @media (max-width: 768px) {

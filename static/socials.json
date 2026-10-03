@@ -1,0 +1,17 @@
+[
+  {
+    "name": "GitHub",
+    "url": "https://github.com/TooLoss/",
+    "icon": "/icons/github.svg"
+  },
+  {
+    "name": "Website",
+    "url": "https://www.bilele-elhaddadi.me/",
+    "icon": "/icons/website.svg"
+  },
+  {
+    "name": "Linkedin",
+    "url": "https://www.linkedin.com/in/bilele-elhaddadi/",
+    "icon": "/icons/linkedin.svg"
+  }
+]

@@ -6,3 +6,4 @@ export { default as Skeleton } from "./Skeleton.svelte";
 export { default as Separator } from "./Separator.svelte";
 export { default as TableOfContents } from "./TableOfContents.svelte";
 export { default as Card } from "./Card.svelte";
+export { default as Social } from "./Social.svelte";
