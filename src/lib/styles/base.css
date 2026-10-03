@@ -124,6 +124,29 @@ button {
     text-align: left;
 }
 
+summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::marker {
+    display: none;
+}
+
+hr {
+    border: none;
+    margin: 0;
+    padding: 0;
+    height: 2px;
+    /* background-color: var(--border-strong); */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
 /* ANIMATIONS */
 
 @keyframes skeleton-pulse {

@@ -41,6 +41,7 @@
     --bg-elevated:     var(--color-primary-700);
     --bg-surface-hover:  oklch(18%  calc(var(--primary-base-chroma)*0.3)    var(--hue-primary));
     --bg-secondary:      oklch(22%  calc(var(--secondary-base-chroma)*0.4)  var(--hue-secondary));
+    --bg-secondary-hover:      oklch(24%  calc(var(--secondary-base-chroma)*0.4)  var(--hue-secondary));
 
     /* Text Hierarchy */
     --text-primary:    oklch(96% 0.01 var(--hue-primary));

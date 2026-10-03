@@ -10,7 +10,8 @@
         Skeleton,
         Separator,
         TableOfContents,
-        Scroll
+        Scroll,
+        Details
     } from '$lib/index';
 
     import {
@@ -51,16 +52,24 @@
 
 <Color>
     <Stack gap="s2">
-        <h2  use:typewriter={{ duration: 400, delay: 100, inViewOptions: { threshold: 1 } }}>Why ?</h2>
+        <h2 use:typewriter={{ duration: 400, delay: 100, inViewOptions: { threshold: 1 } }}>Why ?</h2>
         <Stack paddingDirection='none'>
             <p style="text-indent:10px;">
-                I built this UI library to push Svelte to its limits while learning what it really takes to design a solid interface.
+                I started building this UI component library to design my future website.
+                Thank's to the experience earned at <a href="https://net7.dev"
+                target="_blank">net7</a> building websites and services, I
+                applied all I learned in this UI component library.
             </p>
             <p style="text-indent:10px;">
-                The aesthetic is inspired by classic computer science tools, using monospace fonts and clean blue accents, making it a great fit for a developer portfolio or technical project showcase. Custom animations give the components a distinct feel so they don't look like generic templates.
+                The aesthetic is inspired by classic computer science tools,
+                using monospace fonts and clean blue accents, making it a great
+                fit for a developer portfolio or technical project showcase.
+                Custom animations give the components a distinct feel so they
+                don't look like generic templates.
             </p>
             <p style="text-indent:10px;">
-                Building this toolkit now saves me time when setting up future projects, including my own portfolio.
+                Building this toolkit now saves me time when setting up future
+                projects, including my own portfolio.
             </p>
         </Stack>
     </Stack>
@@ -160,7 +169,7 @@
             </Flex>
         </Frame>
     </Flex>
-    <Frame outline={true}>
+    <Frame outline>
         <Flex direction="column" gap="s3">
             <Flex>
                 <Badge>Python</Badge>
@@ -168,15 +177,59 @@
             <p><b>Frame can have outline</b></p>
         </Flex>
     </Frame>
-    <Frame outline={true} transparent={true}>
+    <Frame outline transparent>
         <p><b>Frame can have outline and be transparent</b></p>
     </Frame>
     <Frame variant="secondary">
         <p><b>Frame can have outline and be transparent</b></p>
     </Frame>
-    <Frame variant="secondary" outline={true}>
+    <Frame variant="secondary" outline>
         <p><b>Frame can have outline and be transparent</b></p>
     </Frame>
+    <Frame variant="subtle" padding="zero" >
+        <p><b>Frame can have outline and be transparent</b></p>
+    </Frame>
+    <Frame variant="subtle" padding="small" effect>
+        <p><b>Frame can have effects on hover</b></p>
+    </Frame>
+    <Frame variant="secondary" padding="small" effect>
+        <p><b>Frame can have effects on hover</b></p>
+    </Frame>
+    <Frame padding="small" effect>
+        <p><b>Frame can have effects on hover</b></p>
+    </Frame>
+</Stack>
+
+<Stack>
+    <h2>Details</h2>
+    <Details
+        summary="test"
+        framed
+    >
+        A detail component
+    </Details>
+
+    <Details
+        summary="test"
+    >
+        Unfolded
+    </Details>
+
+    <Details
+        summary="test"
+        variant="secondary"
+    >
+        Unfolded
+    </Details>
+    <Details>
+        {#snippet summarySnippet()}
+            <Flex align="center" justify="space-between" style="flex-grow: 1">
+                <p>A customed summary</p>
+                <p>99+</p>
+            </Flex>
+        {/snippet}
+        <p>Hello there !</p>
+    </Details>
 </Stack>
 
 <Stack>

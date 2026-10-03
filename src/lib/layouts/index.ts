@@ -4,3 +4,4 @@ export { default as Stack } from "./Stack.svelte";
 export { default as Header } from "./Header.svelte";
 export { default as Color } from "./Color.svelte";
 export { default as Scroll } from "./Scroll.svelte";
+export { default as Details } from "./Details.svelte";
