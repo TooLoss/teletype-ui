@@ -2,7 +2,6 @@
     import type { Snippet } from 'svelte';
     import type { HTMLAttributes } from 'svelte/elements';
     import type { Size } from '$lib/types.ts';
-    import Flex from './Flex.svelte';
 
     type Props = HTMLAttributes<HTMLElement> & {
         children?: Snippet;
@@ -26,8 +25,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        min-height: 94vh;
-        min-height: 94dvh;
+        min-height: 98dvh;
+        min-height: 98dvh;
         width: 100%;
         box-sizing: border-box;
     }

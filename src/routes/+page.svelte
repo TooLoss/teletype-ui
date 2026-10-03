@@ -22,8 +22,20 @@
         Check
     } from '@lucide/svelte';
 
+    import ColorPicker from '$lib/internal/ColorPicker.svelte';
     import Github from '$lib/internal/Github.svelte';
+
+    let color = $state(280);
+    let chroma = $state(0.15);
+
+    $effect(() => {
+        if (typeof document !== 'undefined') {
+            document.documentElement.style.setProperty('--hue-primary', `${color}deg`);
+            document.documentElement.style.setProperty('--primary-base-chroma', `${chroma}`);
+        }
+    });
 </script>
+
 
 <Header top="s1">
     <Stack>
@@ -32,9 +44,7 @@
                 <h1 use:hackreveal={{ duration: 1500, inViewOptions: { threshold: 0.5 } }}>teletype-ui</h1>
                 <p>UI Component Library</p>
             </Flex>
-            <span style="height: 100px; width: 100px; background-color: var(--bg-app-variant)">
-
-            </span>
+            <ColorPicker bind:color bind:chroma />
         </Flex>
     </Stack>
 </Header>
