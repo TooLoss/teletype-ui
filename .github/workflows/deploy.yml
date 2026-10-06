@@ -4,20 +4,24 @@ on:
   push:
     branches: 'main'
 
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
 jobs:
   build_site:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v6
+        uses: pnpm/action-setup@v4
         with:
           version: 9
 
       - name: Install Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: pnpm
@@ -25,13 +29,13 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: build
+      - name: Build site
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
         run: pnpm build
 
       - name: Upload Artifacts
-        uses: actions/upload-pages-artifact@v5
+        uses: actions/upload-pages-artifact@v3
         with:
           path: 'build/'
 
@@ -50,4 +54,4 @@ jobs:
     steps:
       - name: Deploy
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v4
