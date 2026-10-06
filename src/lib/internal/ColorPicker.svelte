@@ -119,8 +119,8 @@
         background:
             conic-gradient(
                 from 0deg in oklch longer hue,
-                oklch(20% calc(var(--primary-base-chroma)*0.5) 0deg),
-                oklch(20% calc(var(--primary-base-chroma)*0.5) 360deg)
+                oklch(35% calc(var(--primary-base-chroma)*0.8) 0deg),
+                oklch(35% calc(var(--primary-base-chroma)*0.8) 360deg)
             );
         filter: blur(10px);
         transform: scale(1.3);
@@ -133,8 +133,8 @@
         background:
             linear-gradient(
                 90deg,
-                oklch(20% calc(var(--primary-base-chroma)*0) var(--hue-primary)),
-                oklch(20% calc(var(--primary-base-chroma)*1) var(--hue-primary))
+                oklch(35% calc(var(--primary-base-chroma)*0) var(--hue-primary)),
+                oklch(35% calc(var(--primary-base-chroma)*1) var(--hue-primary))
             );
         pointer-events: none;
     }

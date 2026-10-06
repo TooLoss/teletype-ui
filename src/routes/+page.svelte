@@ -56,6 +56,9 @@
     });
 </script>
 
+<svelte:head>
+    <title>teletype-ui</title> 
+</svelte:head>
 
 <Header top="s1">
     <Stack>
