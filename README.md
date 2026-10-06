@@ -26,7 +26,25 @@ import 'teletype-ui/tokens.css';
 import 'teletype-ui/base.css';
 ```
 
-3. Import components in the main page
+3. Update parameters
+
+In `+layout.svelte` add a root style to override parameters
+
+```svelte
+<style>
+    :root {
+        --hue-primary: 250deg;
+        --hue-secondary: 280deg;
+        --primary-base-chroma: 0.15;
+        --secondary-base-chroma: 0.20;
+    }
+</style>
+```
+
+You can see parameters in [`tokens.css`](src/lib/styles/tokens.css)
+
+
+4. Import components in the main page and start using the lib
 
 In a page `+page.svelte`, you can import components like this :
 
