@@ -3,13 +3,39 @@
 A classic computer-science-inspired UI component library designed for developer
 portfolios, technical showcases, and minimalist web applications.
 
+It's a dynamic UI library. You can select a base color, the theme will adapt.
+
 [Demo](https://teletype.bilele.tech/)
 
 ---
 
-## Description
+## Usage
 
-Teletype-ui is a dynamic UI library. You can pick a base color, the theme will adapt.
+1. Download the library
+
+```
+npm install teletype-ui
+```
+
+2. Update base CSS
+
+In `+layout.svelte` add these lines
+
+```ts
+import 'teletype-ui/tokens.css';
+import 'teletype-ui/base.css';
+```
+
+3. Import components in the main page
+
+In a page `+page.svelte`, you can import components like this :
+
+```ts
+import {
+    Flex,
+    hackreveal
+} from 'teletype-ui';
+```
 
 ---
 
