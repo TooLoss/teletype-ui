@@ -10,7 +10,6 @@
         Badge,
         Frame,
         Skeleton,
-        Separator,
         TableOfContents,
         Scroll,
         Details,
