@@ -19,10 +19,8 @@
         children
     }: Props = $props();
 
-    import {
-        Flex,
-        Stack
-    } from 'teletype-ui';
+    import Flex from '../layouts/Flex.svelte';
+    import Stack from '../layouts/Stack.svelte';
 
     const circleSize = "1.8rem";
     const thickness = "0.25rem";
