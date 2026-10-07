@@ -1,5 +1,6 @@
 <script lang="ts">
     import type { Size } from '$lib/types.ts';
+    import Flex from '../layouts/Flex.svelte';
 
     type Props = {
         name?: string;
@@ -16,15 +17,17 @@
     }: Props = $props();
 </script>
 
-<a
-    href={url}
-    target="_blank"
-    rel="noopener noreferrer"
-    class="link"
-    style={`width: ${size}; height: ${size}; -webkit-mask-image: url(${icon}); mask-image: url(${icon});`}
-    aria-label={name}
->
-</a>
+<abbr title={name}>
+    <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="link"
+        style={`width: ${size}; height: ${size}; -webkit-mask-image: url(${icon}); mask-image: url(${icon});`}
+        aria-label={name}
+    >
+    </a>
+</abbr>
 
 <style>
     .link {

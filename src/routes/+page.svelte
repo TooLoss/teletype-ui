@@ -213,6 +213,13 @@
 </Stack>
 
 <Stack>
+    <h2>Social</h2>
+    {#each socials as s}
+        <Social {...s} />
+    {/each}
+</Stack>
+
+<Stack>
     <h2>Frames</h2>
     <Flex gap="s4">
         <Frame>

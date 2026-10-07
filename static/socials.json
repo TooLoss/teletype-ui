@@ -1,16 +1,16 @@
 [
   {
-    "name": "GitHub",
+    "name": "TooLoss",
     "url": "https://github.com/TooLoss/",
     "icon": "/icons/github.svg"
   },
   {
-    "name": "Website",
+    "name": "portfolio.bilele.tech",
     "url": "https://www.bilele-elhaddadi.me/",
     "icon": "/icons/website.svg"
   },
   {
-    "name": "Linkedin",
+    "name": "bilele-elhaddadi",
     "url": "https://www.linkedin.com/in/bilele-elhaddadi/",
     "icon": "/icons/linkedin.svg"
   }
