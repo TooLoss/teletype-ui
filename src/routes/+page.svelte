@@ -13,7 +13,8 @@
         TableOfContents,
         Scroll,
         Details,
-        Social
+        Social,
+        Timeline
     } from '$lib/index';
 
     import {
@@ -209,6 +210,18 @@
         <Badge>badge</Badge>
         <Badge icon={Check}>badge</Badge>
         <Badge icon={Github}>github</Badge>
+    </Flex>
+</Stack>
+
+<Stack gap="s1">
+    <h2>Timeline</h2>
+    <Flex direction="column" gap="zero">
+        <Timeline name="A very important thing's you've done" date="67/67" description="Hello !" />
+        <Timeline end name="Another thing" date="67/67" />
+    </Flex>
+    <Flex direction="column">
+        <Timeline noline name="A very important thing's you've done" date="67/67" description="Hello !" />
+        <Timeline noline name="Another thing" date="67/67" />
     </Flex>
 </Stack>
 

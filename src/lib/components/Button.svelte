@@ -16,7 +16,7 @@
     };
 
     type Props = (AnchorProps | ButtonProps) & {
-        variant: 'default' | 'variant' | 'secondary';
+        variant?: 'default' | 'variant' | 'secondary';
         icon?: LucideIcon | Component;
         enlargement?: number;
         top?: number;
