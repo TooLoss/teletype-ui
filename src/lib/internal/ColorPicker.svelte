@@ -88,6 +88,11 @@
     >
         <div class="chroma-picker"> </div>
     </button>
+
+    <span>
+        <div class="text-picker">angle: {color}</div>
+        <div class="text-picker">chroma: {chroma}</div>
+    </span>
 </div>
 
 <style>
@@ -96,6 +101,10 @@
         flex-direction: column;
         flex-wrap: nowrap;
         gap: var(--size-s4);
+    }
+
+    .text-picker {
+        color: var(--text-muted);
     }
 
     .square {
