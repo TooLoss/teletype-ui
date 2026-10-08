@@ -90,8 +90,8 @@
         
         /* made with https://css-generators.com/wavy-shapes/ */
         mask: 
-            radial-gradient(calc(11.41px + 0.125rem) at calc(100% + 5.5px) 50%,#0000 calc(99% - 0.25rem),#000 calc(101% - 0.25rem) 99%,#0000 101%) calc(50% - 5px - 0.125rem + .5px) calc(50% - 20px)/calc(10px + 0.25rem) 40px  repeat-y,
-            radial-gradient(calc(11.41px + 0.125rem) at -5.5px 50%,#0000 calc(99% - 0.25rem),#000 calc(101% - 0.25rem) 99%,#0000 101%) calc(50% + 5px + 0.125rem) 50%/calc(10px + 0.25rem) 40px  repeat-y;
+            radial-gradient(1.505rem at calc(100% + 1.12rem) 50%,#0000 calc(99% - 0.25rem),#000 calc(101% - 0.25rem) 99%,#0000 101%) calc(50% - 0.525rem + .5px) calc(50% - 1.6rem)/ 1.05rem 3.2rem  repeat-y,
+            radial-gradient(1.505rem at -1.12rem 50%,#0000 calc(99% - 0.25rem),#000 calc(101% - 0.25rem) 99%,#0000 101%) calc(50% + 0.525rem) 50%/1.05rem 3.2rem  repeat-y;
     }
 
     p {
