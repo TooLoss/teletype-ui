@@ -105,6 +105,7 @@
 
     .text-picker {
         color: var(--text-muted);
+        font-size: 13px;
     }
 
     .square {
