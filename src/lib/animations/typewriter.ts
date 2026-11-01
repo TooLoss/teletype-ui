@@ -57,7 +57,7 @@ export function typewriter(node: HTMLElement, options: TypewriterOptions = {}) {
                 const targetCharCount = Math.floor(easedProgress * totalChars);
 
                 if (targetCharCount !== lastRenderedIndex) {
-                    node.textContent = originalText.slice(0, targetCharCount);
+                    node.textContent = originalText.slice(0, targetCharCount) || '⠀';
                     lastRenderedIndex = targetCharCount;
                 }
 
