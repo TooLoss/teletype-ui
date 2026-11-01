@@ -77,7 +77,10 @@ Source page is available [here](src/route/+page.svelte).
 - [`Badge`](src/lib/components/Badge.svelte) - Compact label for tags. Can have Lucide icons or svg as parameters.
 - [`Button`](src/lib/components/Button.svelte) - Buttons with variants.
 - [`Frame`](src/lib/components/Frame.svelte) - Flexible border container supporting outlines, transparency, hover effects
+- [`PictureGroup`](src/lib/components/PictureGroup.svelte) - Image gallery component featuring an expanding accordion effect
+- [`Social`](src/lib/components/Social.svelte) - Button used to render SVG for socials.
 - [`TableOfContents`](src/lib/components/TableOfContents.svelte) - On-page quick navigation list linked to section headers. Works with articles.
+- [`Timeline`](src/lib/components/Timeline.svelte) - Timeline component to showcase time-related events.
 
 ### Animations
 
