@@ -14,7 +14,8 @@
         Scroll,
         Details,
         Social,
-        Timeline
+        Timeline,
+        PictureGroup
     } from '$lib/index';
 
     import {
@@ -284,6 +285,12 @@
         <Skeleton />
         <Skeleton />
     </Flex>
+</Stack>
+
+<Stack>
+    <h2>Picture group</h2>
+    <PictureGroup srcs={['https://picsum.photos/1920/1080', 'https://picsum.photos/1920/1080', 'https://picsum.photos/1920/1080', 'https://picsum.photos/1920/1080']} />
+    <PictureGroup srcs={['https://picsum.photos/1920/1080', 'https://picsum.photos/1920/1080', 'https://picsum.photos/1920/1080']} />
 </Stack>
 
 

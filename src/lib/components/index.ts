@@ -8,3 +8,4 @@ export { default as TableOfContents } from "./TableOfContents.svelte";
 export { default as Card } from "./Card.svelte";
 export { default as Social } from "./Social.svelte";
 export { default as Timeline } from "./Timeline.svelte";
+export { default as PictureGroup } from "./PictureGroup.svelte";

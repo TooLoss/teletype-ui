@@ -1,6 +1,5 @@
 <script lang="ts">
     import type { Size } from '$lib/types.ts';
-    import Flex from '../layouts/Flex.svelte';
 
     type Props = {
         name?: string;
@@ -13,7 +12,7 @@
         name = '',
         icon = '',
         url = '',
-        size = '1.5rem',
+        size = 's3',
     }: Props = $props();
 </script>
 
