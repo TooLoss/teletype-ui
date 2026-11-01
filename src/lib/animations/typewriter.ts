@@ -80,7 +80,7 @@ export function typewriter(node: HTMLElement, options: TypewriterOptions = {}) {
     }
 
     if (trigger === 'inView' || trigger === 'manual') {
-        node.textContent = '';
+        node.textContent = '⠀';
     }
 
     let inViewWatcher: ReturnType<typeof observeInView> | null = null;
