@@ -178,6 +178,18 @@
 </Stack>
 
 <Stack>
+    <h2>Animations</h2>
+
+    <span>Refresh the page to render the animation</span>
+
+    <Stack>
+        <h3 use:hackreveal={{ duration: 900, delay: 200, trigger: 'mount', inViewOptions: { threshold: 1 } }}>Hackreveal</h3>
+        <h3 use:typewriter={{ duration: 900, delay: 200, trigger: 'mount', inViewOptions: { threshold: 1 } }}>Typewriter</h3>
+    </Stack>
+
+</Stack>
+
+<Stack>
     <h2>Buttons</h2>
     <Flex>
         <Button>
