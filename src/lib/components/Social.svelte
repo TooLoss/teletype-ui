@@ -1,18 +1,16 @@
 <script lang="ts">
-    import type { Size } from '$lib/types.ts';
-
     type Props = {
         name?: string;
         icon?: string;
         url?: string;
-        size?: Size;
+        size?: string;
     }
 
     let {
         name = '',
         icon = '',
         url = '',
-        size = 's3',
+        size = '1rem',
     }: Props = $props();
 </script>
 
