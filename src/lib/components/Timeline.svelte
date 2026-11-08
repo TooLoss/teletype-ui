@@ -41,9 +41,7 @@
                 <div class="circle-inner"></div>
                 <div 
                     class="stick"
-                    style={`
-                        ${end ? 'background: linear-gradient(var(--text-primary), var(--bg-app));' : ''}
-                    `}
+                    class:end-stick={end}
                 ></div>
             </Flex>
         {/if}
@@ -96,5 +94,9 @@
 
     p {
         color: var(--text-muted);
+    }
+
+    .end-stick {
+        background: linear-gradient(var(--text-primary), var(--bg-app));
     }
 </style>
